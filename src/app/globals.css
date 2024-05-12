@@ -2,19 +2,22 @@
 @tailwind components;
 @tailwind utilities;
 
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
 :root {
-  --foreground-rgb: 0, 0, 0;
+  /* --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+  --background-end-rgb: 255, 255, 255; */
+  color : #333;
 }
 
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
   :root {
     --foreground-rgb: 255, 255, 255;
     --background-start-rgb: 0, 0, 0;
     --background-end-rgb: 0, 0, 0;
   }
-}
+} */
 
 body {
   color: rgb(var(--foreground-rgb));
@@ -29,5 +32,45 @@ body {
 @layer utilities {
   .text-balance {
     text-wrap: balance;
+  }
+}
+
+@layer base{
+  @layer face {
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 100;
+  font-style: normal;
+  }
+  @layer face{
+      font-family: "Pacifico", cursive;
+      font-weight: 400;
+      font-style: normal;
+  }
+  .exp:hover .exp-line{
+    height: 16px ;
+    background:rgb(255 99 71 / var(--tw-bg-opacity));
+  }
+  .desc{
+    transform : translateY(100%)
+  }
+  .desc.slider{
+    transform:translateY(0);
+    box-shadow: 4px -10px 10px rgba(0,0,0,0.1);
+  }
+  input:focus + label,
+  input:not(:placeholder-shown) + label{
+    top: -7px;
+    background-color: #fff;
+    padding: 0 5px;
+  }
+  textarea:focus + label,
+  textarea:not(:placeholder-shown) + label{
+    top: -7px;
+    background-color: #fff;
+    padding: 0 5px;
+  }
+  .submit:hover .submit-slide{
+    width: 200px;
   }
 }
