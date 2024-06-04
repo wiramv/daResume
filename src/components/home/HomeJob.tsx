@@ -36,9 +36,9 @@ export default function HomeJob(){
     return(
         <div className="flex flex-col gap-24 relative">
             {jobDatas.map((job:jobData, index:number) => (
-                <div key={index} className={index !== 1?"h-[500px] lg:h-[1000px] w-full bg-transparent lg:bg-primary flex items-center text-text":"h-fit lg:h-[1000px] w-full bg-primary flex flex-row-reverse items-center text-text"}>
+                <div key={index} className={index !== 1?" h-fit md:h-[500px] lg:h-[1000px] w-full bg-transparent lg:bg-primary block md:flex items-center text-text":"h-fit md:h-[500px] lg:h-[1000px] w-full bg-transparent lg:bg-primary block lg:flex flex-row-reverse items-center text-text"}>
                     <Image src={job.image} width={0} height={0} alt={job.title} className="lg:h-[1000px] object-contain lg:object-fill" loading="lazy"/>
-                    <div className={index !== 1? "absolute right-1 md:right-36 h-fit lg:h-[600px] w-[300px] bg-bg flex flex-col items-center justify-center gap-10 p-5 -translate-x-40 shadow-xl":"absolute left-1 md:left-36 h-fit lg:h-[600px] w-[300px] bg-bg flex flex-col items-center justify-center gap-10 p-5 translate-x-40 shadow-xl"}>
+                    <div className={index !== 1? "static md:absolute right-1 md:right-36 h-fit lg:h-[600px] w-full md:w-[300px] bg-bg flex flex-col items-center justify-center gap-10 p-5 translate-x-0 md:-translate-x-40 shadow-xl":"static md:absolute left-1 md:left-36 h-fit lg:h-[600px] w-full md:w-[300px] bg-bg flex flex-col items-center justify-center gap-10 p-5 translate-x-0 lg:translate-x-40 shadow-xl"}>
                         <h1 className="font-montserat text-2xl font-bold">
                             {job.title}
                         </h1>

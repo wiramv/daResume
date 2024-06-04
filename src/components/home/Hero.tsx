@@ -5,17 +5,18 @@ import Link from "next/link";
 import { footerIcon } from "@/components/template/Footer";
 import arrow from "|/arrow.png"
 import Image from "next/image";
+import face from "|/face.jpg"
 
 export default function Hero() {
   const icons: footerIcon[] = [
     {
       alt: "github",
-      url: "",
+      url: "https://github.com/wiramv",
       icon: TbBrandGithubFilled
     },
     {
       alt: "Linkdin",
-      url: "",
+      url: "https://www.linkedin.com/in/wiramv/",
       icon: GrLinkedinOption
     }
   ]
@@ -23,10 +24,10 @@ export default function Hero() {
   return (
     <div style={{ backgroundImage: "url(/main_bg.jpg)", backgroundAttachment: "fixed" }} className="w-full pb-52 pt-24">
       {/* glassmorph */}
-      <div className="backdrop-blur-md border-4 border-white w-[90%] mx-auto py-24 rounded-xl px-5   grid grid-cols-1 2xl:grid-cols-3 items-center ">
+      <div className="backdrop-blur-md border-4 border-white w-[90%] mx-auto py-24 rounded-xl px-5   grid grid-cols-1 2xl:grid-cols-3 items-center max-w-[1300px] mt-5 md:mt-24 ">
         {/* text */}
         <div className="font-montserat col-span-1 2xl:col-span-2 order-1 mx-auto text-text">
-          <div className="font-pacifico text-3xl lg:text-accent">
+          <div className="font-pacifico sm:text-3xl text-lg text-gray-700">
             Hi There, my name is
           </div>
           <div className="text-2xl sm:text-5xl lg:text-7xl">
@@ -59,7 +60,8 @@ export default function Hero() {
           </div>
         </div>
         {/* pp */}
-        <div className="max-w-[500px] h-[500px] w-full  bg-accent 2xl:order-2 mb-24 2xl:mb-0 mx-auto">
+        <div className="max-w-[200px] h-[200px] w-full   2xl:order-2 mb-24 2xl:mb-0 mx-auto rounded-full overflow-hidden border-accent border-8">
+              <Image src={face} alt="face" className="w-full h-full object-contain "/>  
         </div>
       </div>
     </div>
